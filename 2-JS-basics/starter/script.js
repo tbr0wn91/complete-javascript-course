@@ -43,72 +43,109 @@
 //  console.log(firstName + ' ' + lastName);
 
 
- // Basic Operators
- var year, yearThomas, yearMark;
- ageThomas = 28
- ageMark = 33;
+//  // Basic Operators
+//  var year, yearThomas, yearMark;
+//  ageThomas = 28
+//  ageMark = 33;
 
 
- var now = 2019;
- var yearThomas = now - ageThomas;
- var yearMark = now - ageMark;
- console.log(yearThomas);
+//  var now = 2019;
+//  var yearThomas = now - ageThomas;
+//  var yearMark = now - ageMark;
+//  console.log(yearThomas);
 
- console.log(now + 2)
- console.log(now * 2)
- console.log(now / 10);
+//  console.log(now + 2)
+//  console.log(now * 2)
+//  console.log(now / 10);
 
- //Logical Operators
-
-
-var thomasOlder = ageThomas < ageMark;
-console.log(thomasOlder)
-
-// typeof operator
-
-console.log(typeof thomasOlder);
-console.log(typeof ageThomas);
-console.log(typeof 'Mark is older than Thomas');
-var x;
-console.log(typeof x);
-
-//Operator precedence
-
-var now = 2019;
-var yearJohn = 1989;
-var fullAge = 18;
-
-// Multiple operators
-var isFullAge = now - yearJohn >= fullAge; //true
-console.log(isFullAge);
-
-//Grouping
-var ageJohn = now - yearJohn;
-var ageMark = 35;
-var average = (ageJohn + ageMark) / 2;
-console.log(average);
-
-// Multiple assignments
-var x, y;
-x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6// 26
-console.log(x, y);
-
-// More operators
-
-x = x * 2;
-x *= 2;
+//  //Logical Operators
 
 
-x += 10;
+// var thomasOlder = ageThomas < ageMark;
+// console.log(thomasOlder)
 
-x++
+// // typeof operator
+
+// console.log(typeof thomasOlder);
+// console.log(typeof ageThomas);
+// console.log(typeof 'Mark is older than Thomas');
+// var x;
+// console.log(typeof x);
+
+// //Operator precedence
+
+// var now = 2019;
+// var yearJohn = 1989;
+// var fullAge = 18;
+
+// // Multiple operators
+// var isFullAge = now - yearJohn >= fullAge; //true
+// console.log(isFullAge);
+
+// //Grouping
+// var ageJohn = now - yearJohn;
+// var ageMark = 35;
+// var average = (ageJohn + ageMark) / 2;
+// console.log(average);
+
+// // Multiple assignments
+// var x, y;
+// x = y = (3 + 5) * 4 - 6; // 8 * 4 - 6 // 32 - 6// 26
+// console.log(x, y);
+
+// // More operators
+
+// x = x * 2;
+// x *= 2;
 
 
-/*********************
- * CODING CHALLENGE 1
- */
+// x += 10;
 
-var johnMass = 150;
+// x++
+
+
+// /*********************
+//  * CODING CHALLENGE 1
+//  */
+
+// var johnMass = 150;
+// var johnHeight = 1.8;
+
+// var markMass = 180;
+// var markHeight = 1.9
+
+// var johnBmi = johnMass / johnHeight**2;
+// console.log(johnBmi)
+
+// var markBmi = markMass / markHeight**2;
+// console.log( markBmi);
+
+// var markHigher = markBmi > johnBmi;
+// console.log(markHigher)
+// console.log('Is Mark\'s BMI higher than John\'s? ' + markHigher);
+
+//If / else statements
+
+
+var firstName = 'Thomas';
+var civilStatus = 'single';
+
+if(civilStatus === 'married'){
+    console.log(firstName + ' is married!')
+}
+else{
+    console.log(firstName + ' will hopefully marry soon!')
+}
+
+var isMarried = true;
+if(isMarried){
+    console.log(firstName + ' is married!')
+}
+else{
+    console.log(firstName + ' will hopefully marry soon!')
+}
+
+var johnMass = 200;
 var johnHeight = 1.8;
 
 var markMass = 180;
@@ -120,6 +157,22 @@ console.log(johnBmi)
 var markBmi = markMass / markHeight**2;
 console.log( markBmi);
 
-var markHigher = markBmi > johnBmi;
-console.log(markHigher)
-console.log('Is Mark\'s BMI higher than John\'s? ' + markHigher);
+if (markBmi > johnBmi){
+    console.log('Mark\'s BMI is higher than John\'s.')
+}
+else{
+    console.log('John\'s BMI is higher than Mark\'s.')
+}
+
+// var markHigher = markBmi > johnBmi;
+// console.log(markHigher)
+// console.log('Is Mark\'s BMI higher than John\'s? ' + markHigher);
+
+//Boolean Logic
+
+var firstName = "Thomas";
+var age = 28;
+
+if (age < 13){
+    console.log()
+}g
