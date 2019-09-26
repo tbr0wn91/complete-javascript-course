@@ -232,19 +232,31 @@ var age = 16;
 //falsy values: undefined, null 0, '', NaN
 // truthy values: NOT falsy values
 
-var height;
-height = 23;
+// var height;
+// height = 23;
 
-if (height || height === 0){
-    console.log('Variable is defined')
-} else {
-    console.log('Variable has NOT been defined');
-}
+// if (height || height === 0){
+//     console.log('Variable is defined')
+// } else {
+//     console.log('Variable has NOT been defined');
+// }
 
-// Equality operators
-if (height == '23'){
-    console.log('The == operator does type coercion!');
-}
+// // Equality operators
+// if (height == '23'){
+//     console.log('The == operator does type coercion!');
+// }
 
+// // CODING CHALLENGE 2
+
+// var johnTeam = (89 + 120 + 103) / 3;
+// var mikeTeam = (116 + 123 + 94) / 3;
+
+// if(johnTeam > mikeTeam){
+//     console.log("johns team wins with an average score of " + johnTeam);
+// } else if (mikeTeam > johnTeam) {
+//     console.log("mikes team wins with an average score of " + mikeTeam);
+// } else {
+//     console.log('its a tie')
+// }
 
 
