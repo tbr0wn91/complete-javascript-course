@@ -259,4 +259,29 @@ var age = 16;
 //     console.log('its a tie')
 // }
 
+//  Functions
 
+function calculateAge(birthYear){
+    return 2018 - birthYear;
+}
+
+var ageThomas = calculateAge(1991);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+
+console.log(ageThomas, ageJane, ageMike);
+
+function retirement(year, firstName){
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    if (retirement > 0){
+        console.log(firstName + ' retires in ' + retirement + ' years');
+    } else {
+        console.log(firstName + " is already retired.");
+    }
+    
+}
+
+retirement(1991, 'Thomas');
+retirement(1948, 'Mike');
+retirement(1969, 'Jane');
