@@ -288,21 +288,55 @@ var age = 16;
 
 // Function statements and Expressions
 
-// function expression
-var whatDoYouDo = function(job, firstName){
-    switch(job) {
-        case 'teacher':
-            return firstName + " teaches kids how to code";
-        case 'driver':
-            return firstName + " drives  cab in Lisbon";
-        case 'designer':
-            return firstName + " designs beautiful websites";
-        default:
-            return firstName + " does something else";
-    }
-}
+// // function expression
+// var whatDoYouDo = function(job, firstName){
+//     switch(job) {
+//         case 'teacher':
+//             return firstName + " teaches kids how to code";
+//         case 'driver':
+//             return firstName + " drives  cab in Lisbon";
+//         case 'designer':
+//             return firstName + " designs beautiful websites";
+//         default:
+//             return firstName + " does something else";
+//     }
+// }
 
 
-console.log(whatDoYouDo('teacher', 'John'));
+// console.log(whatDoYouDo('teacher', 'John'));
+
+// Arrays
+
+
+// Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[2])
+console.log(names.length)
+
+// Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+// Different Data types
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+john.push('blue');
+john.unshift('Mr.')
+
+console.log(john);
+
+john.pop();
+john.shift();
+console.log(john);
+
+console.log(john.indexOf(1990));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer': 'John IS a designer';
+console.log(isDesigner);
+
 
 
