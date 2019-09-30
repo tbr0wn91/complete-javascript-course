@@ -341,24 +341,52 @@ var age = 16;
 
 // Coding Challenge 3
 
-function tipCalc(bill){
-    var tip;
+// function tipCalc(bill){
+//     var tip;
 
-    if( bill < 50){
-        tip = .2
-    } else if ( bill >= 50 && bill <= 200){
-        tip = .15
-    } else{
-        tip = .1
-    }
-    return tip * bill;
+//     if( bill < 50){
+//         tip = .2
+//     } else if ( bill >= 50 && bill <= 200){
+//         tip = .15
+//     } else{
+//         tip = .1
+//     }
+//     return tip * bill;
+// }
+
+// var bills = [124, 48, 268];
+
+// var tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
+
+// var amount = [bills[0] + tips[0],bills[1] + tips[1], bills[2] + tips[2]]
+
+// console.log(tips);
+
+// Objects and properties
+
+
+// Object Literal
+var john = {
+    firstName: 'John',
+    lastName: 'Smith',
+    birthYear: 1990,
+    family: ['Jane', 'Mark', 'Bob', 'Emily'],
+    job: 'teacher',
+    isMarried: false,
 }
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
 
-var bills = [124, 48, 268];
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
 
-var tips = [tipCalc(bills[0]), tipCalc(bills[1]), tipCalc(bills[2])];
 
-var amount = [bills[0] + tips[0],bills[1] + tips[1], bills[2] + tips[2]]
-
-console.log(tips);
-
+// new Object syntax
+var jane = new Object();
+jane.name = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
