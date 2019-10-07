@@ -486,20 +486,96 @@ var age = 16;
 
 //continue and break statements
 
-var john = ['John', 'Smith', 1990, 'teacher', false];
+// var john = ['John', 'Smith', 1990, 'teacher', false];
 
-for (var i = 0; i < john.length; i++){
-    if(typeof john[i] !== 'string') continue;
-    console.log(john[i]);
+// for (var i = 0; i < john.length; i++){
+//     if(typeof john[i] !== 'string') continue;
+//     console.log(john[i]);
+// }
+
+// for (var i = 0; i < john.length; i++){
+//     if(typeof john[i] !== 'string') break;
+//     console.log(john[i]);
+// }
+
+
+// //Looping backwards
+// for(var i = john.length - 1; i >= 0; i--){
+//     console.log(john[i])
+// }
+
+
+//coding challenge 5
+
+var bill = {
+    bills: [124, 48, 268, 180, 42],
+    tipCalc: function(){
+        this.tips = [];
+        this.totals = [];
+     for(var i = 0; i < this.bills.length; i++){
+        var percentage;
+
+        if(this.bills[i] < 50){
+            percentage = .2;
+        } else if(this.bills[i] >= 50 && this.bills[i] < 200){
+            percentage = .15;
+        } else{
+            percentage = .1;
+        }
+
+        this.tips[i] = this.bills[i] * percentage;
+        this.totals[i] = this.bills[i] + this.bills[i] * percentage;
+
+     }
+    }
 }
 
-for (var i = 0; i < john.length; i++){
-    if(typeof john[i] !== 'string') break;
-    console.log(john[i]);
+
+
+var mark = {
+    fullName: 'Mark Miller',
+    bills: [77, 475, 110, 45],
+    tipCalc: function(){
+        this.tips = [];
+        this.totals = [];
+     for(var i = 0; i < this.bills.length; i++){
+        var percentage;
+
+        if(this.bills[i] < 100){
+            percentage = .2;
+        } else if(this.bills[i] >= 100 && this.bills[i] < 300){
+            percentage = .1;
+        } else{
+            percentage = .25;
+        }
+
+        this.tips[i] = this.bills[i] * percentage;
+        this.totals[i] = this.bills[i] + this.bills[i] * percentage;
+
+     }
+    }
 }
 
 
-//Looping backwards
-for(var i = john.length - 1; i >= 0; i--){
-    console.log(john[i])
+function calcAverage(tips){
+    var sum = 0;
+    for (var i = 0; i < tips.length; i++){
+        sum = sum + tips[i]
+    }
+    return sum / tips.length;
 }
+
+
+
+mark.tipCalc();
+
+bill.tipCalc();
+
+
+bill.average = calcAverage(bill.tips);
+mark.average = calcAverage(mark.tips);
+
+
+console.log(bill)
+console.log(mark);
+
