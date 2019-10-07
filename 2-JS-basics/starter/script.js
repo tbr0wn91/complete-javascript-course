@@ -366,27 +366,98 @@ var age = 16;
 
 
 // Object Literal
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1990,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//     job: 'teacher',
+//     isMarried: false,
+// }
+// console.log(john.firstName);
+// console.log(john['lastName']);
+// var x = 'birthYear';
+// console.log(john[x]);
+
+// john.job = 'designer';
+// john['isMarried'] = true;
+// console.log(john);
+
+
+// // new Object syntax
+// var jane = new Object();
+// jane.name = 'Jane';
+// jane.birthYear = 1969;
+// jane['lastName'] = 'Smith';
+// console.log(jane);
+
+//Object methods
+
+// var john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     birthYear: 1992,
+//     family: ['Jane', 'Mark', 'Bob', 'Emily'],
+//     job: 'teacher',
+//     isMarried: false,
+//     calcAge: function(){
+//         this.age = 2018 - this.birthYear;
+//     }
+// };
+
+//  john.calcAge();
+//  console.log(john)
+
+ //Coding Challenge 4
+
+ // var johnMass = 150;
+// var johnHeight = 1.8;
+
+// var markMass = 180;
+// var markHeight = 1.9
+
+// var johnBmi = johnMass / johnHeight**2;
+// console.log(johnBmi)
+
+// var markBmi = markMass / markHeight**2;
+// console.log( markBmi);
+
+// var markHigher = markBmi > johnBmi;
+// console.log(markHigher)
+// console.log('Is Mark\'s BMI higher than John\'s? ' + markHigher);
+
 var john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    birthYear: 1990,
-    family: ['Jane', 'Mark', 'Bob', 'Emily'],
-    job: 'teacher',
-    isMarried: false,
+    firstName: "John",
+    lastName: "Brown",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function(){
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
 }
-console.log(john.firstName);
-console.log(john['lastName']);
-var x = 'birthYear';
-console.log(john[x]);
 
-john.job = 'designer';
-john['isMarried'] = true;
-console.log(john);
+var mark = {
+    firstName: "Mark",
+    lastName: "Jones",
+    mass: 2,
+    height: 1.69,
+    markBmi: function(){
+        this.bmi = this.mass / this.height**2;
+        return this.bmi;
+    }
+}
 
+john.calcBMI()
+mark.markBmi()
+console.log(john)
 
-// new Object syntax
-var jane = new Object();
-jane.name = 'Jane';
-jane.birthYear = 1969;
-jane['lastName'] = 'Smith';
-console.log(jane);
+if(john.bmi > mark.bmi){
+    console.log(`John Brown has the higher bmi of ${john.bmi}`);
+}
+else if(mark.bmi > john.bmi){
+    console.log(`Mark Jones has the higher bmi of ${mark.bmi}`);
+}
+else{
+    console.log("There bmi's are the same!")
+}
