@@ -426,38 +426,80 @@ var age = 16;
 // console.log(markHigher)
 // console.log('Is Mark\'s BMI higher than John\'s? ' + markHigher);
 
-var john = {
-    firstName: "John",
-    lastName: "Brown",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function(){
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
-    }
+// var john = {
+//     firstName: "John",
+//     lastName: "Brown",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function(){
+//         this.bmi = this.mass / (this.height * this.height);
+//         return this.bmi;
+//     }
+// }
+
+// var mark = {
+//     firstName: "Mark",
+//     lastName: "Jones",
+//     mass: 2,
+//     height: 1.69,
+//     markBmi: function(){
+//         this.bmi = this.mass / this.height**2;
+//         return this.bmi;
+//     }
+// }
+
+// john.calcBMI()
+// mark.markBmi()
+// console.log(john)
+
+// if(john.bmi > mark.bmi){
+//     console.log(`John Brown has the higher bmi of ${john.bmi}`);
+// }
+// else if(mark.bmi > john.bmi){
+//     console.log(`Mark Jones has the higher bmi of ${mark.bmi}`);
+// }
+// else{
+//     console.log("There bmi's are the same!")
+// }
+
+//Loops and iterations
+
+
+//for loop
+// for(var i = 0; i < 10; i++){
+//     console.log(i)
+// }
+
+// var john = ['John', 'Smith', 1990, 'teacher', false];
+
+// for (var i = 0; i < john.length; i++){
+//     console.log(john[i]);
+// }
+
+
+// //while loop
+// var i = 0;
+// while(i < john.length){
+//     console.log(john[i]);
+//     i++;
+// }
+
+//continue and break statements
+
+var john = ['John', 'Smith', 1990, 'teacher', false];
+
+for (var i = 0; i < john.length; i++){
+    if(typeof john[i] !== 'string') continue;
+    console.log(john[i]);
 }
 
-var mark = {
-    firstName: "Mark",
-    lastName: "Jones",
-    mass: 2,
-    height: 1.69,
-    markBmi: function(){
-        this.bmi = this.mass / this.height**2;
-        return this.bmi;
-    }
+for (var i = 0; i < john.length; i++){
+    if(typeof john[i] !== 'string') break;
+    console.log(john[i]);
 }
 
-john.calcBMI()
-mark.markBmi()
-console.log(john)
 
-if(john.bmi > mark.bmi){
-    console.log(`John Brown has the higher bmi of ${john.bmi}`);
-}
-else if(mark.bmi > john.bmi){
-    console.log(`Mark Jones has the higher bmi of ${mark.bmi}`);
-}
-else{
-    console.log("There bmi's are the same!")
+//Looping backwards
+for(var i = john.length - 1; i >= 0; i--){
+    console.log(john[i])
 }
